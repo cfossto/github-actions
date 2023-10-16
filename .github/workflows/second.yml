@@ -1,4 +1,4 @@
-name: second-workflow
+name: BuildTestDockerize
 run-name: building stuff
 on:
   pull_request:
