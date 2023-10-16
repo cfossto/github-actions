@@ -17,7 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: | 
-          docker login -u=${{secrets.INTERNAL_DOCKER_USERNAME}} \ 
-          -p =${{secrets.INTERNAL_DOCKER_REPO_PASS}}
+          docker login -u ${{secrets.INTERNAL_DOCKER_USERNAME}} \ 
+          -p ${{secrets.INTERNAL_DOCKER_REPO_PASS}}
       - run: docker build -t internal-registry:4000/supernewbox2 .
       - run: docker push internal-registry:4000/supernewbox2
