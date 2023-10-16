@@ -1,6 +1,10 @@
 name: main-workflow-test
 run-name: ${{ github.actor }}_is_testing_stuff
-on: [push]
+on:
+  push:
+    branches:
+      - master
+
 jobs:
   run-java-unit-tests:
     runs-on: ubuntu-latest
