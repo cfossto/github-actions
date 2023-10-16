@@ -1,0 +1,10 @@
+name: test-job
+run-name: ${{ github.actor }}_is_testing_stuff
+on: [push]
+jobs:
+  run-java-unit-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: maven test
+        
