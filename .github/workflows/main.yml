@@ -1,4 +1,4 @@
-name: test-job
+name: main-workflow-test
 run-name: ${{ github.actor }}_is_testing_stuff
 on: [push]
 jobs:
