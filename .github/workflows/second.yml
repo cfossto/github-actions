@@ -1,0 +1,19 @@
+name: second-workflow
+run-name: building stuff
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build-spring-application:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: maven package
+      
+  build-and-push-docker-image:
+    runs-on: ubuntu-latest
+    steps:
+      - run: docker build -t internal-registry:4000/supernewbox2 .
+      - run: docker push internal-registry:4000/supernewbox2
