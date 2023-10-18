@@ -11,5 +11,10 @@ pipeline{
          echo "Hello"
        }
      }
+     stage('Build and Push Docker Image'){
+       steps{
+         docker ps
+       }
+     }
    }
 }
