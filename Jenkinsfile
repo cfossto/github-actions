@@ -13,7 +13,7 @@ pipeline{
      }
      stage('Build and Push Docker Image'){
        steps{
-         docker ps
+         sh docker ps
        }
      }
    }
