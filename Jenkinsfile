@@ -1,9 +1,8 @@
-pipeline{
- 
- node {
+node {
   checkout scm
  }
- 
+
+pipeline{ 
  agent any
    
  stages{
