@@ -6,7 +6,7 @@ pipeline{
  agent any
 
   environment {
-    CURRENT-AUTHOR = "Christopher built this ${env.BUILD_TAG}"
+    CURRENT_AUTHOR = "Christopher built this ${env.BUILD_TAG}"
   }
    
  stages{
@@ -17,7 +17,7 @@ pipeline{
      }
      stage('Build and Push Docker Image'){
        steps{
-         echo ${env.CURRENT-AUTHOR}
+         echo ${env.CURRENT_AUTHOR}
        }
      }
    }
