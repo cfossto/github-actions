@@ -17,7 +17,7 @@ pipeline{
      }
      stage('Build and Push Docker Image'){
        steps{
-         echo ${env.CURRENT_AUTHOR}
+         echo "${env.CURRENT_AUTHOR}"
        }
      }
    }
