@@ -4,6 +4,10 @@ node {
 
 pipeline{ 
  agent any
+
+  environment {
+    CURRENT-AUTHOR = "Christopher built this ${env.BUILD_TAG}"
+  }
    
  stages{
      stage('Build Java Artifact'){
@@ -13,7 +17,7 @@ pipeline{
      }
      stage('Build and Push Docker Image'){
        steps{
-         sh 'docker ps'
+         echo ${env.CURRENT-AUTHOR}
        }
      }
    }
