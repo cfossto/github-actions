@@ -7,3 +7,5 @@ The second one is building, testing, building a Docker container and pushing it 
 a remote repository.
 
 Connected to local Jenkins instance for testing.
+
+A change.
